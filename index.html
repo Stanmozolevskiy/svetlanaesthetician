@@ -1,0 +1,85 @@
+<!DOCTYPE html><html lang='en'><head><meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title data-i18n="site.title">Svetlana — Esthetician</title>
+<meta name="description" content="Facials, waxing, and sugaring by a licensed esthetician. Science-driven skincare with a caring touch."/>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css" />
+<script defer src="script.js"></script>
+</head><body><header class="site-header">
+  <a class="logo" href="index.html"><span class="brand">Svetlana</span><span class="brand-sub">Esthetician</span></a>
+  <nav class="nav">
+    <a data-i18n="nav.home" href="index.html">Home</a>
+    <a data-i18n="nav.services" href="services.html">Services</a>
+    <a data-i18n="nav.contact" href="contact.html">Contact</a>
+  </nav>
+  <div class="lang-switch">
+    <button class="lang" data-lang="en" aria-label="Switch language to English">EN</button>
+    <button class="lang" data-lang="fr" aria-label="Basculer en français">FR</button>
+    <button class="lang" data-lang="ru" aria-label="Переключить на русский">RU</button>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="hero-text">
+      <h1 data-i18n="hero.title">Glowing skin, science-backed care</h1>
+      <p data-i18n="hero.subtitle">Facials, waxing & sugaring in a calm, welcoming studio.</p>
+      <a class="btn" href="services.html" data-i18n="hero.cta">See services</a>
+    </div>
+    <div class="hero-media">
+      <img src="assets/owner.jpg" alt="Licensed esthetician portrait" />
+    </div>
+  </section>
+
+  <section class="highlights">
+    <div class="card">
+      <h3>10+</h3>
+      <p data-i18n="highlights.experience">years of esthetics experience</p>
+    </div>
+    <div class="card">
+      <h3 data-i18n="highlights.medschool.title">Medical</h3>
+      <p data-i18n="highlights.medschool.text">international studies background</p>
+    </div>
+    <div class="card">
+      <h3>🌿</h3>
+      <p data-i18n="highlights.approach">Unique mix of science and care for your skin</p>
+    </div>
+  </section>
+
+  <section class="about">
+    <div class="about-media">
+      <img src="assets/treatment.jpg" alt="Ultrasound facial treatment" />
+    </div>
+    <div class="about-text">
+      <h2 data-i18n="about.title">Hi, I’m Svetlana</h2>
+      <p data-i18n="about.text">
+        I combine advanced techniques with a gentle approach to help you feel confident in your skin.
+      </p>
+      <ul class="ticks">
+        <li data-i18n="about.point1">Customized facials for every skin type</li>
+        <li data-i18n="about.point2">Waxing & sugaring for smooth results</li>
+        <li data-i18n="about.point3">Safe, hygienic, and results-focused</li>
+      </ul>
+      <a class="btn ghost" href="contact.html" data-i18n="about.cta">Book or ask a question</a>
+    </div>
+  </section>
+
+  <section class="gallery">
+    <figure><img src="https://images.pexels.com/photos/3861964/pexels-photo-3861964.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Facial skincare" /><figcaption data-i18n="gallery.caption1">Relaxing facials</figcaption></figure>
+    <figure><img src="https://images.pexels.com/photos/3738348/pexels-photo-3738348.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Waxing and sugaring" /><figcaption data-i18n="gallery.caption2">Waxing & sugaring</figcaption></figure>
+    <figure><img src="https://images.pexels.com/photos/6628100/pexels-photo-6628100.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Clean skincare products" /><figcaption data-i18n="gallery.caption3">Clean, safe products</figcaption></figure>
+  </section>
+</main>
+<footer class="site-footer">
+  <p>&copy; <span id="year"></span> <span class="brand">Svetlana</span> · <span data-i18n="footer.rights">All rights reserved.</span></p>
+  <div class="socials">
+    <a href="https://www.instagram.com/svetlana_esthetician" target="_blank" rel="noopener" aria-label="Instagram">Instagram</a>
+  </div>
+</footer>
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
+</body></html>

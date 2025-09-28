@@ -1,0 +1,80 @@
+<!DOCTYPE html><html lang='en'><head><meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title data-i18n="site.title">Svetlana — Esthetician</title>
+<meta name="description" content="Facials, waxing, and sugaring by a licensed esthetician. Science-driven skincare with a caring touch."/>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css" />
+<script defer src="script.js"></script>
+</head><body><header class="site-header">
+  <a class="logo" href="index.html"><span class="brand">Svetlana</span><span class="brand-sub">Esthetician</span></a>
+  <nav class="nav">
+    <a data-i18n="nav.home" href="index.html">Home</a>
+    <a data-i18n="nav.services" href="services.html">Services</a>
+    <a data-i18n="nav.contact" href="contact.html">Contact</a>
+  </nav>
+  <div class="lang-switch">
+    <button class="lang" data-lang="en" aria-label="Switch language to English">EN</button>
+    <button class="lang" data-lang="fr" aria-label="Basculer en français">FR</button>
+    <button class="lang" data-lang="ru" aria-label="Переключить на русский">RU</button>
+  </div>
+</header>
+
+<main>
+  <section class="page-intro">
+    <h1 data-i18n="contact.title">Book & Contact</h1>
+    <p data-i18n="contact.subtitle">Send a message on Instagram or by email — I’ll reply quickly.</p>
+  </section>
+
+  <section class="contact-grid">
+    <div class="contact-card">
+      <h3>Instagram</h3>
+      <p><a href="https://www.instagram.com/svetlana_esthetician" target="_blank" rel="noopener">@svetlana_esthetician</a></p>
+    </div>
+    <div class="contact-card">
+      <h3 data-i18n="contact.email">Email</h3>
+      <p><a href="mailto:hello@svetlana-skin.example" target="_blank" rel="noopener">hello@svetlana-skin.example</a></p>
+    </div>
+    <div class="contact-card">
+      <h3 data-i18n="contact.hours">Hours</h3>
+      <p data-i18n="contact.hoursText">By appointment. Weekends available.</p>
+    </div>
+  </section>
+
+  <section class="map">
+    <img src="https://maps.googleapis.com/maps/api/staticmap?center=Montreal,QC&zoom=11&size=1200x350&markers=color:red%7CMontreal,QC" alt="Map placeholder of service area" />
+    <p class="muted" data-i18n="contact.mapNote">Exact address provided after booking.</p>
+  </section>
+
+  <section class="contact-form">
+    <h2 data-i18n="form.title">Quick message</h2>
+    <form name="contact" onsubmit="return handleSubmit(event)">
+      <div class="row">
+        <label data-i18n="form.name.label">Name</label>
+        <input type="text" name="name" required placeholder="Your name" data-i18n-placeholder="form.name.placeholder"/>
+      </div>
+      <div class="row">
+        <label>Email</label>
+        <input type="email" name="email" required placeholder="you@example.com" />
+      </div>
+      <div class="row">
+        <label data-i18n="form.message.label">Message</label>
+        <textarea name="message" rows="5" required placeholder="Tell me about your skin goals…" data-i18n-placeholder="form.message.placeholder"></textarea>
+      </div>
+      <button class="btn" type="submit" data-i18n="form.submit">Send</button>
+      <p id="form-status" class="muted" role="status"></p>
+    </form>
+  </section>
+</main>
+<footer class="site-footer">
+  <p>&copy; <span id="year"></span> <span class="brand">Svetlana</span> · <span data-i18n="footer.rights">All rights reserved.</span></p>
+  <div class="socials">
+    <a href="https://www.instagram.com/svetlana_esthetician" target="_blank" rel="noopener" aria-label="Instagram">Instagram</a>
+  </div>
+</footer>
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
+</body></html>

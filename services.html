@@ -1,0 +1,83 @@
+<!DOCTYPE html><html lang='en'><head><meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title data-i18n="site.title">Svetlana — Esthetician</title>
+<meta name="description" content="Facials, waxing, and sugaring by a licensed esthetician. Science-driven skincare with a caring touch."/>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css" />
+<script defer src="script.js"></script>
+</head><body><header class="site-header">
+  <a class="logo" href="index.html"><span class="brand">Svetlana</span><span class="brand-sub">Esthetician</span></a>
+  <nav class="nav">
+    <a data-i18n="nav.home" href="index.html">Home</a>
+    <a data-i18n="nav.services" href="services.html">Services</a>
+    <a data-i18n="nav.contact" href="contact.html">Contact</a>
+  </nav>
+  <div class="lang-switch">
+    <button class="lang" data-lang="en" aria-label="Switch language to English">EN</button>
+    <button class="lang" data-lang="fr" aria-label="Basculer en français">FR</button>
+    <button class="lang" data-lang="ru" aria-label="Переключить на русский">RU</button>
+  </div>
+</header>
+
+<main>
+  <section class="page-intro">
+    <h1 data-i18n="services.title">Services & Pricing</h1>
+    <p data-i18n="services.subtitle">A few popular options below — reach out for a personalized plan.</p>
+  </section>
+
+  <section class="services-grid">
+    <article class="svc">
+      <h3 data-i18n="svc.facials.title">Facials</h3>
+      <p data-i18n="svc.facials.text">Ultrasound, mechanical, and combined cleansing with optional peels.</p>
+      <ul class="price-list">
+        <li><span data-i18n="svc.facials.ultra">Ultrasound cleansing</span><strong>$50</strong></li>
+        <li><span data-i18n="svc.facials.mechanical">Mechanical cleansing</span><strong>$60</strong></li>
+        <li><span data-i18n="svc.facials.combined">Combined cleansing</span><strong>$70</strong></li>
+        <li><span data-i18n="svc.facials.peeling">Any cleansing + peel</span><strong>$80–100</strong></li>
+      </ul>
+    </article>
+    <article class="svc">
+      <h3 data-i18n="svc.wax.title">Waxing / Sugaring</h3>
+      <ul class="price-list">
+        <li><span data-i18n="svc.wax.bikini">Bikini full / classic</span><strong>$40 / $20</strong></li>
+        <li><span data-i18n="svc.wax.legs">Full legs / half legs</span><strong>$60 / $40</strong></li>
+        <li><span data-i18n="svc.wax.arms">Full arms / half arms</span><strong>$35 / $25</strong></li>
+        <li><span data-i18n="svc.wax.face">Upper lip + chin / full face</span><strong>$5–25</strong></li>
+      </ul>
+    </article>
+    <article class="svc">
+      <h3 data-i18n="svc.peels.title">Peels & Treatments</h3>
+      <ul class="price-list">
+        <li><span data-i18n="svc.peels.surface">Surface peels (Azelaiс, Mandelic, Salicylic, Currant)</span><strong>$50</strong></li>
+        <li><span data-i18n="svc.peels.prx">PRX-T33 (no-downtime bio-revitalizing)</span><strong>$100</strong></li>
+        <li><span data-i18n="svc.peels.microneedling">Microneedling / anti-age / whitening</span><strong>$100</strong></li>
+        <li><span data-i18n="svc.peels.special">Sensitive skin & anti-acne procedures</span><strong>$80–90</strong></li>
+      </ul>
+    </article>
+  </section>
+
+  <section class="cta-wide">
+    <h2 data-i18n="services.ctaTitle">Not sure what to choose?</h2>
+    <p data-i18n="services.ctaText">Message me with your skin goals — I’ll recommend the best treatment.</p>
+    <a class="btn" href="contact.html" data-i18n="services.ctaBtn">Get in touch</a>
+  </section>
+
+  <section class="price-images">
+    <img src="assets/price1.png" alt="Facial price list" />
+    <img src="assets/price2.png" alt="Waxing price list" />
+    <img src="assets/price3.png" alt="Care treatments price list" />
+  </section>
+</main>
+<footer class="site-footer">
+  <p>&copy; <span id="year"></span> <span class="brand">Svetlana</span> · <span data-i18n="footer.rights">All rights reserved.</span></p>
+  <div class="socials">
+    <a href="https://www.instagram.com/svetlana_esthetician" target="_blank" rel="noopener" aria-label="Instagram">Instagram</a>
+  </div>
+</footer>
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
+</body></html>
