@@ -1,0 +1,91 @@
+<!DOCTYPE html><html lang='en'><head><meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title data-i18n="site.title">Svetlana — Esthetician</title>
+<meta name="description" content="Facials, waxing, and sugaring by a licensed esthetician. Science-driven skincare with a caring touch."/>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css" />
+<script defer src="script.js"></script>
+</head><body><header class="site-header">
+  <a class="logo" href="index.html"><span class="brand">Svetlana</span><span class="brand-sub">Esthetician</span></a>
+  <nav class="nav">
+    <a data-i18n="nav.home" href="index.html">Home</a>
+    <a data-i18n="nav.services" href="services.html">Services</a>
+    <a data-i18n="nav.booking" href="booking.html">Book</a>
+    <a data-i18n="nav.contact" href="contact.html">Contact</a>
+  </nav>
+  <div class="lang-switch">
+    <button class="lang" data-lang="en" aria-label="Switch language to English">EN</button>
+    <button class="lang" data-lang="fr" aria-label="Basculer en français">FR</button>
+    <button class="lang" data-lang="ru" aria-label="Переключить на русский">RU</button>
+  </div>
+</header>
+
+
+  <main class="content">
+    <section class="booking">
+      <h1 data-i18n="booking.title">Book an Appointment</h1>
+      <p data-i18n="booking.subtitle">Choose your preferred service and time below. You’ll receive a confirmation by email.</p>
+
+      <form id="bookForm" onsubmit="return createBookingViaAPI(event)">
+        <!-- Service -->
+        <div class="row">
+          <label for="service" data-i18n="booking.serviceLabel">Service</label>
+          <select name="service" id="service" required>
+            <option data-i18n="booking.opt.ultra"   value="Facial — Ultrasound" data-min="50">Facial — Ultrasound (50 min)</option>
+            <option data-i18n="booking.opt.combined" value="Facial — Combined"   data-min="60">Facial — Combined (60 min)</option>
+            <option data-i18n="booking.opt.wax"     value="Waxing / Sugaring"    data-min="45">Waxing / Sugaring (45 min)</option>
+            <option data-i18n="booking.opt.prx"     value="PRX-T33"              data-min="60">PRX-T33 (60 min)</option>
+            <option data-i18n="booking.opt.micro"   value="Microneedling"        data-min="75">Microneedling (75 min)</option>
+          </select>
+        </div>
+
+        <!-- Date -->
+        <div class="row">
+          <label for="date" data-i18n="booking.dateLabel">Date</label>
+          <input type="date" name="date" id="date" required />
+        </div>
+
+        <!-- Time (populated by availability) -->
+        <div class="row">
+          <label for="timeSelect" data-i18n="booking.timeLabel">Time</label>
+          <select id="timeSelect" name="time" required>
+            <option value="" disabled selected>--:--</option>
+          </select>
+          <small id="slotHelp" class="muted" data-i18n="booking.slotHelp">Pick a free time.</small>
+        </div>
+
+        <!-- Name -->
+        <div class="row">
+          <label for="name" data-i18n="booking.nameLabel">Name</label>
+          <input type="text" name="name" id="name" required
+                 placeholder="Your name" data-i18n-placeholder="booking.namePH" />
+        </div>
+
+        <!-- Email -->
+        <div class="row">
+          <label for="email" data-i18n="booking.emailLabel">Email</label>
+          <input type="email" name="email" id="email" required
+                 placeholder="you@example.com" data-i18n-placeholder="booking.emailPH" />
+        </div>
+
+        <!-- Phone -->
+        <div class="row">
+          <label for="phone" data-i18n="booking.phoneLabel">Phone</label>
+          <input type="tel" name="phone" id="phone" required
+                 placeholder="+1 514-555-0123" data-i18n-placeholder="booking.phonePH" />
+        </div>
+
+        <button class="btn" type="submit" data-i18n="booking.submit">Book Appointment</button>
+        <p id="bookStatus" class="muted" aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 <span data-i18n="site.title">Svetlana — Esthetician</span>. <span data-i18n="footer.rights">All rights reserved.</span></p>
+  </footer>
+
+</body>
+</html>
